@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Jungle Slots</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 25%, #6b8e23 50%, #9acd32 75%, #adff2f 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo i {
+            color: #ff6b35;
+            margin-right: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffd700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ff6b35, #adff2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Privacy Content */
+        .privacy-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            border-radius: 2px;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            color: #ff6b35;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .privacy-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .privacy-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .data-table th {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            opacity: 0.9;
+        }
+
+        .warning-box {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .warning-box h4 {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box {
+            background: rgba(173, 255, 47, 0.1);
+            border: 2px solid rgba(173, 255, 47, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: #adff2f;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .security-box {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .security-box h4 {
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .toc h3 {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .toc a:hover {
+            color: #ffd700;
+            padding-left: 1rem;
+        }
+
+        /* Rights Section */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .right-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .right-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .right-card i {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .right-card h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        /* Back to Home */
+        .back-to-home {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ffd700;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            padding-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .privacy-content {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .toc {
+                padding: 1.5rem;
+            }
+
+            .data-table {
+                font-size: 0.9rem;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .privacy-content {
+                padding: 1.5rem;
+            }
+
+            .warning-box, .info-box, .security-box {
+                padding: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                Jungle Slots
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">Your privacy matters to us. Learn how we collect, use, and protect your personal information on Jungle Slots.</p>
+            </div>
+
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i> Last Updated: September 24, 2024
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">1. Overview</a></li>
+                    <li><a href="#information-collected">2. Information We Collect</a></li>
+                    <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                    <li><a href="#information-sharing">4. Information Sharing</a></li>
+                    <li><a href="#data-security">5. Data Security</a></li>
+                    <li><a href="#cookies">6. Cookies and Tracking</a></li>
+                    <li><a href="#your-rights">7. Your Rights</a></li>
+                    <li><a href="#children-privacy">8. Children's Privacy</a></li>
+                    <li><a href="#international-transfers">9. International Transfers</a></li>
+                    <li><a href="#data-retention">10. Data Retention</a></li>
+                    <li><a href="#policy-changes">11. Policy Changes</a></li>
+                    <li><a href="#contact-us">12. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Privacy Content -->
+            <div class="privacy-content">
+                <!-- Section 1: Overview -->
+                <div class="privacy-section" id="overview">
+                    <h2 class="section-title">1. Overview</h2>
+                    <p>Welcome to Jungle Slots' Privacy Policy. This policy describes how we collect, use, and protect your personal information when you use our demo casino platform.</p>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-shield-alt"></i> Our Commitment</h4>
+                        <p>We are committed to protecting your privacy and ensuring transparency about our data practices. We only collect information necessary to provide and improve our services.</p>
+                    </div>
+
+                    <p>Key principles of our privacy approach:</p>
+                    <ul>
+                        <li><span class="highlight">Minimal Data Collection:</span> We collect only what's necessary</li>
+                        <li><span class="highlight">Transparency:</span> Clear information about our practices</li>
+                        <li><span class="highlight">User Control:</span> You control your personal information</li>
+                        <li><span class="highlight">Security:</span> Strong protection measures in place</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: Information We Collect -->
+                <div class="privacy-section" id="information-collected">
+                    <h2 class="section-title">2. Information We Collect</h2>
+                    
+                    <h3>Information You Provide</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Type of Information</th>
+                                <th>Purpose</th>
+                                <th>Required/Optional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Email Address</td>
+                                <td>Account creation, newsletters</td>
+                                <td>Optional</td>
+                            </tr>
+                            <tr>
+                                <td>Name/Username</td>
+                                <td>Personalization, support</td>
+                                <td>Optional</td>
+                            </tr>
+                            <tr>
+                                <td>Contact Information</td>
+                                <td>Customer support</td>
+                                <td>Optional</td>
+                            </tr>
+                            <tr>
+                                <td>Feedback/Messages</td>
+                                <td>Service improvement</td>
+                                <td>Optional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Information Automatically Collected</h3>
+                    <ul>
+                        <li><strong>Device Information:</strong> Browser type, operating system, device identifiers</li>
+                        <li><strong>Usage Data:</strong> Pages visited, time spent, game interactions</li>
+                        <li><strong>Technical Data:</strong> IP address, connection information, performance metrics</li>
+                        <li><strong>Cookies:</strong> Preferences, session data, analytics information</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> No Financial Information</h4>
+                        <p>Since Jungle Slots is a demo platform with no real money transactions, we do not collect any financial or payment information.</p>
+                    </div>
+                </div>
+
+                <!-- Section 3: How We Use Your Information -->
+                <div class="privacy-section" id="how-we-use">
+                    <h2 class="section-title">3. How We Use Your Information</h2>
+                    <p>We use your information for the following purposes:</p>
+                    
+                    <h3>Service Provision</h3>
+                    <ul>
+                        <li>Providing access to our demo games</li>
+                        <li>Personalizing your gaming experience</li>
+                        <li>Maintaining your preferences and settings</li>
+                        <li>Technical support and troubleshooting</li>
+                    </ul>
+
+                    <h3>Communication</h3>
+                    <ul>
+                        <li>Responding to your inquiries and support requests</li>
+                        <li>Sending newsletters and updates (with consent)</li>
+                        <li>Notifying you about important service changes</li>
+                        <li>Providing game recommendations</li>
+                    </ul>
+
+                    <h3>Improvement and Analytics</h3>
+                    <ul>
+                        <li>Analyzing usage patterns to improve our services</li>
+                        <li>Developing new features and games</li>
+                        <li>Performance monitoring and optimization</li>
+                        <li>Security monitoring and fraud prevention</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Information Sharing -->
+                <div class="privacy-section" id="information-sharing">
+                    <h2 class="section-title">4. Information Sharing</h2>
+                    
+                    <div class="security-box">
+                        <h4><i class="fas fa-lock"></i> No Sale of Personal Data</h4>
+                        <p>We do not sell, rent, or trade your personal information to third parties for marketing purposes.</p>
+                    </div>
+
+                    <p>We may share your information in the following limited circumstances:</p>
+
+                    <h3>Service Providers</h3>
+                    <ul>
+                        <li>Analytics services (Google Analytics, etc.)</li>
+                        <li>Cloud hosting providers</li>
+                        <li>Email service providers</li>
+                        <li>Technical support services</li>
+                    </ul>
+
+                    <h3>Legal Requirements</h3>
+                    <ul>
+                        <li>When required by law or legal process</li>
+                        <li>To protect our rights and property</li>
+                        <li>To ensure user safety and security</li>
+                        <li>In case of business transfers or mergers</li>
+                    </ul>
+                </div>
+
+                <!-- Section 5: Data Security -->
+                <div class="privacy-section" id="data-security">
+                    <h2 class="section-title">5. Data Security</h2>
+                    <p>We implement comprehensive security measures to protect your information:</p>
+
+                    <h3>Technical Safeguards</h3>
+                    <ul>
+                        <li><strong>Encryption:</strong> Data encrypted in transit and at rest</li>
+                        <li><strong>Access Controls:</strong> Limited access on need-to-know basis</li>
+                        <li><strong>Regular Updates:</strong> Security patches and system updates</li>
+                        <li><strong>Monitoring:</strong> 24/7 security monitoring and threat detection</li>
+                    </ul>
+
+                    <h3>Organizational Measures</h3>
+                    <ul>
+                        <li>Employee training on data protection</li>
+                        <li>Regular security audits and assessments</li>
+                        <li>Incident response procedures</li>
+                        <li>Data minimization practices</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> Security Incident Response</h4>
+                        <p>In the unlikely event of a security incident, we will notify affected users promptly and take immediate action to secure the data and prevent further incidents.</p>
+                    </div>
+                </div>
+
+                <!-- Section 6: Cookies and Tracking -->
+                <div class="privacy-section" id="cookies">
+                    <h2 class="section-title">6. Cookies and Tracking</h2>
+                    <p>We use cookies and similar technologies to enhance your experience:</p>
+
+                    <h3>Types of Cookies</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Type</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Essential Cookies</td>
+                                <td>Basic site functionality</td>
+                                <td>Session</td>
+                            </tr>
+                            <tr>
+                                <td>Preference Cookies</td>
+                                <td>Remember your settings</td>
+                                <td>1 Year</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics Cookies</td>
+                                <td>Usage statistics</td>
+                                <td>2 Years</td>
+                            </tr>
+                            <tr>
+                                <td>Performance Cookies</td>
+                                <td>Site optimization</td>
+                                <td>1 Year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>You can control cookies through your browser settings. Note that disabling certain cookies may affect site functionality.</p>
+                </div>
+
+                <!-- Section 7: Your Rights -->
+                <div class="privacy-section" id="your-rights">
+                    <h2 class="section-title">7. Your Rights</h2>
+                    <p>You have several rights regarding your personal information:</p>
+
+                    <div class="rights-grid">
+                        <div class="right-card">
+                            <i class="fas fa-eye"></i>
+                            <h4>Right to Access</h4>
+                            <p>Request information about the personal data we hold about you.</p>
+                        </div>
+                        <div class="right-card">
+                            <i class="fas fa-edit"></i>
+                            <h4>Right to Rectification</h4>
+                            <p>Correct inaccurate or incomplete personal information.</p>
+                        </div>
+                        <div class="right-card">
+                            <i class="fas fa-trash"></i>
+                            <h4>Right to Erasure</h4>
+                            <p>Request deletion of your personal data in certain circumstances.</p>
+                        </div>
+                        <div class="right-card">
+                            <i class="fas fa-ban"></i>
+                            <h4>Right to Object</h4>
+                            <p>Object to processing of your personal data for certain purposes.</p>
+                        </div>
+                        <div class="right-card">
+                            <i class="fas fa-download"></i>
+                            <h4>Right to Portability</h4>
+                            <p>Receive your personal data in a structured, machine-readable format.</p>
+                        </div>
+                        <div class="right-card">
+                            <i class="fas fa-pause"></i>
+                            <h4>Right to Restriction</h4>
+                            <p>Restrict processing of your personal data in certain situations.</p>
+                        </div>
+                    </div>
+
+                    <p>To exercise any of these rights, please contact us using the information provided in the Contact Us section.</p>
+                </div>
+
+                <!-- Section 8: Children's Privacy -->
+                <div class="privacy-section" id="children-privacy">
+                    <h2 class="section-title">8. Children's Privacy</h2>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-child"></i> Age Restriction</h4>
+                        <p>Jungle Slots is not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+                    </div>
+
+                    <p>If we discover that we have collected information from a child under 18, we will:</p>
+                    <ul>
+                        <li>Delete the information immediately</li>
+                        <li>Terminate any associated account</li>
+                        <li>Notify parents or guardians if required</li>
+                        <li>Implement additional safeguards</li>
+                    </ul>
+                </div>
+
+                <!-- Section 9: International Transfers -->
+                <div class="privacy-section" id="international-transfers">
+                    <h2 class="section-title">9. International Transfers</h2>
+                    <p>Your information may be transferred to and processed in countries other than your own. We ensure adequate protection through:</p>
+                    <ul>
+                        <li>Adequacy decisions by relevant authorities</li>
+                        <li>Standard contractual clauses</li>
+                        <li>Certification schemes and codes of conduct</li>
+                        <li>Binding corporate rules where applicable</li>
+                    </ul>
+                </div>
+
+                <!-- Section 10: Data Retention -->
+                <div class="privacy-section" id="data-retention">
+                    <h2 class="section-title">10. Data Retention</h2>
+                    <p>We retain your information only as long as necessary for the purposes outlined in this policy:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Retention Period</th>
+                                <th>Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account Information</td>
+                                <td>Until account deletion</td>
+                                <td>Service provision</td>
+                            </tr>
+                            <tr>
+                                <td>Usage Data</td>
+                                <td>2 years</td>
+                                <td>Analytics and improvement</td>
+                            </tr>
+                            <tr>
+                                <td>Support Communications</td>
+                                <td>3 years</td>
+                                <td>Legal requirements</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing Data</td>
+                                <td>Until consent withdrawn</td>
+                                <td>Marketing purposes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Section 11: Policy Changes -->
+                <div class="privacy-section" id="policy-changes">
+                    <h2 class="section-title">11. Policy Changes</h2>
+                    <p>We may update this Privacy Policy from time to time. When we make changes, we will:</p>
+                    <ul>
+                        <li>Update the "Last Updated" date at the top of this policy</li>
+                        <li>Notify users of significant changes via email or website notice</li>
+                        <li>Provide a summary of key changes</li>
+                        <li>Allow reasonable time for review before changes take effect</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-bell"></i> Stay Informed</h4>
+                        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+                    </div>
+                </div>
+
+                <!-- Section 12: Contact Us -->
+                <div class="privacy-section" id="contact-us">
+                    <h2 class="section-title">12. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
+                    
+                    <ul>
+                        <li><strong>Email:</strong> privacy@jungleslots.com</li>
+                        <li><strong>Support:</strong> support@jungleslots.com</li>
+                        <li><strong>Address:</strong> Tropical Gaming Center, 123 Jungle Avenue, Paradise City</li>
+                        <li><strong>Response Time:</strong> We typically respond within 48 hours</li>
+                    </ul>
+
+                    <div class="security-box">
+                        <h4><i class="fas fa-user-shield"></i> Data Protection Officer</h4>
+                        <p>For specific privacy concerns or to exercise your rights, you can also contact our Data Protection Officer at: dpo@jungleslots.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="back-to-home">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="games.html">Games</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="responsible.html">Responsible Gaming</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jungle Slots. All rights reserved. | Demo Casino for Entertainment Only</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+
+        // Highlight current section in TOC
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.privacy-section');
+            const tocLinks = document.querySelectorAll('.toc a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.style.color = '#fff';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = '#ffd700';
+                }
+            });
+        });
+
+        // Animate rights cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.right-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
