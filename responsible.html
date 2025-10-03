@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible Gaming - Jungle Slots</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 25%, #6b8e23 50%, #9acd32 75%, #adff2f 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo i {
+            color: #ff6b35;
+            margin-right: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffd700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ff6b35, #adff2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #ffd700;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content ul, .section-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .section-content li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Warning Signs Grid */
+        .warning-signs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .warning-card {
+            background: rgba(255, 107, 53, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .warning-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .warning-card i {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .warning-card h3 {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .warning-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .tool-card {
+            background: rgba(173, 255, 47, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid rgba(173, 255, 47, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(173, 255, 47, 0.3);
+        }
+
+        .tool-card i {
+            font-size: 2.5rem;
+            color: #adff2f;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            color: #adff2f;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Resources Section */
+        .resources {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .resource-card h4 {
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-card p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .resource-card a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            color: #ff6b35;
+        }
+
+        /* Quiz Section */
+        .self-assessment {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .quiz-question h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quiz-option input {
+            margin-right: 0.5rem;
+        }
+
+        .quiz-option label {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+        .quiz-result {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            display: none;
+        }
+
+        .quiz-result.show {
+            display: block;
+        }
+
+        .quiz-result h4 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        /* Emergency Box */
+        .emergency-box {
+            background: rgba(255, 0, 0, 0.1);
+            border: 3px solid rgba(255, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            animation: pulse 2s infinite;
+        }
+
+        .emergency-box h3 {
+            color: #ff4444;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .emergency-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .emergency-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .emergency-contact {
+            background: rgba(255, 68, 68, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 68, 68, 0.4);
+        }
+
+        .emergency-contact a {
+            color: #ff4444;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Back to Home */
+        .back-to-home {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ffd700;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            padding-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .warning-signs, .tools-grid, .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .emergency-contacts {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .emergency-box {
+                padding: 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                Jungle Slots
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Responsible Gaming</h1>
+                <p class="page-subtitle">Gaming should be fun and safe. Learn about responsible gaming practices and get help if you need it.</p>
+            </div>
+
+            <!-- Our Commitment -->
+            <div class="content-section">
+                <h2 class="section-title">Our Commitment to Safe Gaming</h2>
+                <div class="section-content">
+                    <p>At Jungle Slots, we are committed to promoting responsible gaming practices. While our platform uses only virtual credits for entertainment purposes, we believe it's important to educate users about healthy gaming habits and provide resources for those who may need support.</p>
+                    
+                    <p>Our demo platform serves as an educational tool to help players understand casino game mechanics without financial risk. However, we recognize that even demo gaming should be approached responsibly.</p>
+
+                    <h3>Our Principles:</h3>
+                    <ul>
+                        <li><strong>Education:</strong> Providing information about responsible gaming</li>
+                        <li><strong>Prevention:</strong> Helping users recognize potential issues early</li>
+                        <li><strong>Protection:</strong> Implementing safeguards for vulnerable users</li>
+                        <li><strong>Support:</strong> Connecting users with professional help when needed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Warning Signs -->
+            <div class="content-section">
+                <h2 class="section-title">Warning Signs to Watch For</h2>
+                <div class="section-content">
+                    <p>Even though our games don't involve real money, it's important to recognize signs that gaming might be becoming problematic:</p>
+                </div>
+                
+                <div class="warning-signs">
+                    <div class="warning-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <p>Spending excessive time gaming, losing track of time, or neglecting responsibilities and relationships.</p>
+                    </div>
+                    <div class="warning-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Preoccupation</h3>
+                        <p>Constantly thinking about gaming, planning next gaming sessions, or feeling restless when not playing.</p>
+                    </div>
+                    <div class="warning-card">
+                        <i class="fas fa-sad-tear"></i>
+                        <h3>Emotional Changes</h3>
+                        <p>Mood swings, irritability when unable to play, or using gaming to escape from problems or negative feelings.</p>
+                    </div>
+                    <div class="warning-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Social Impact</h3>
+                        <p>Isolating from friends and family, lying about gaming habits, or prioritizing gaming over social activities.</p>
+                    </div>
+                    <div class="warning-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Performance Issues</h3>
+                        <p>Declining performance at work or school, missing deadlines, or avoiding important tasks to game.</p>
+                    </div>
+                    <div class="warning-card">
+                        <i class="fas fa-heart-broken"></i>
+                        <h3>Loss of Interest</h3>
+                        <p>Losing interest in hobbies, activities, or things that were previously enjoyable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self-Assessment Quiz -->
+            <div class="self-assessment">
+                <h2 class="section-title">Self-Assessment Quiz</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">Answer honestly to evaluate your gaming habits:</p>
+                
+                <div class="quiz-question">
+                    <h4>1. How often do you think about gaming when not playing?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" name="q1" value="0" id="q1a">
+                            <label for="q1a">Rarely or never</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q1" value="1" id="q1b">
+                            <label for="q1b">Sometimes</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q1" value="2" id="q1c">
+                            <label for="q1c">Often</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q1" value="3" id="q1d">
+                            <label for="q1d">Almost constantly</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>2. Do you lose track of time while gaming?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" name="q2" value="0" id="q2a">
+                            <label for="q2a">Never</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q2" value="1" id="q2b">
+                            <label for="q2b">Occasionally</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q2" value="2" id="q2c">
+                            <label for="q2c">Frequently</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q2" value="3" id="q2d">
+                            <label for="q2d">Almost always</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>3. Has gaming affected your relationships or responsibilities?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" name="q3" value="0" id="q3a">
+                            <label for="q3a">Not at all</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q3" value="1" id="q3b">
+                            <label for="q3b">Slightly</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q3" value="2" id="q3c">
+                            <label for="q3c">Moderately</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q3" value="3" id="q3d">
+                            <label for="q3d">Significantly</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>4. Do you feel restless or irritable when unable to play?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" name="q4" value="0" id="q4a">
+                            <label for="q4a">Never</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q4" value="1" id="q4b">
+                            <label for="q4b">Sometimes</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q4" value="2" id="q4c">
+                            <label for="q4c">Often</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q4" value="3" id="q4d">
+                            <label for="q4d">Always</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>5. Do you use gaming to escape from problems or negative emotions?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" name="q5" value="0" id="q5a">
+                            <label for="q5a">Never</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q5" value="1" id="q5b">
+                            <label for="q5b">Occasionally</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q5" value="2" id="q5c">
+                            <label for="q5c">Frequently</label>
+                        </div>
+                        <div class="quiz-option">
+                            <input type="radio" name="q5" value="3" id="q5d">
+                            <label for="q5d">Almost always</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="calculateQuizScore()" style="margin-top: 2rem;">Get My Results</button>
+
+                <div class="quiz-result" id="quizResult">
+                    <h4 id="resultTitle"></h4>
+                    <p id="resultMessage"></p>
+                </div>
+            </div>
+
+            <!-- Healthy Gaming Tools -->
+            <div class="content-section">
+                <h2 class="section-title">Tools for Healthy Gaming</h2>
+                <div class="section-content">
+                    <p>Use these strategies to maintain a healthy relationship with gaming:</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-stopwatch"></i>
+                        <h3>Set Time Limits</h3>
+                        <p>Decide how much time you'll spend gaming before you start and stick to it.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Schedule Gaming</h3>
+                        <p>Plan gaming sessions like any other activity, ensuring balance with other responsibilities.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-bell"></i>
+                        <h3>Use Reminders</h3>
+                        <p>Set alarms or notifications to remind yourself to take breaks and stop playing.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-running"></i>
+                        <h3>Stay Active</h3>
+                        <p>Maintain physical activities and hobbies outside of gaming to keep a balanced lifestyle.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Social Balance</h3>
+                        <p>Ensure gaming doesn't replace face-to-face social interactions with friends and family.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-bed"></i>
+                        <h3>Protect Sleep</h3>
+                        <p>Avoid gaming close to bedtime to ensure quality sleep and rest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Help -->
+            <div class="emergency-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Need Immediate Help?</h3>
+                <p>If you're struggling with gaming habits and need immediate support, don't hesitate to reach out:</p>
+                <div class="emergency-contacts">
+                    <div class="emergency-contact">
+                        <a href="tel:1-800-522-4700">National Problem Gambling Helpline<br>1-800-522-4700</a>
+                    </div>
+                    <div class="emergency-contact">
+                        <a href="https://www.ncpgambling.org/chat" target="_blank">Live Chat Support<br>Available 24/7</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="resources">
+                <h2 class="section-title">Support Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h4><i class="fas fa-phone"></i> Helplines</h4>
+                        <p><strong>National Problem Gambling Helpline:</strong> 1-800-522-4700</p>
+                        <p><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+                        <a href="tel:1-800-522-4700">Call Now</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4><i class="fas fa-globe"></i> Online Resources</h4>
+                        <p><strong>National Council on Problem Gambling:</strong> Professional resources and support</p>
+                        <p><strong>Gamblers Anonymous:</strong> Peer support groups</p>
+                        <a href="https://www.ncpgambling.org" target="_blank">Visit Website</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4><i class="fas fa-user-md"></i> Professional Help</h4>
+                        <p><strong>Therapists:</strong> Find licensed mental health professionals</p>
+                        <p><strong>Counseling Centers:</strong> Local support services</p>
+                        <a href="https://www.psychologytoday.com" target="_blank">Find a Therapist</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4><i class="fas fa-book"></i> Educational Materials</h4>
+                        <p><strong>Self-Help Books:</strong> Resources for understanding and recovery</p>
+                        <p><strong>Online Courses:</strong> Learn about healthy gaming habits</p>
+                        <a href="#" onclick="alert('Educational materials coming soon!')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="back-to-home">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="games.html">Games</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="responsible.html">Responsible Gaming</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jungle Slots. All rights reserved. | Demo Casino for Entertainment Only</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Quiz functionality
+        function calculateQuizScore() {
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5'];
+            let totalScore = 0;
+            let answeredQuestions = 0;
+
+            questions.forEach(question => {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption) {
+                    totalScore += parseInt(selectedOption.value);
+                    answeredQuestions++;
+                }
+            });
+
+            if (answeredQuestions < questions.length) {
+                alert('Please answer all questions to get your results.');
+                return;
+            }
+
+            const resultDiv = document.getElementById('quizResult');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultMessage = document.getElementById('resultMessage');
+
+            let title, message;
+
+            if (totalScore <= 3) {
+                title = "Low Risk - Healthy Gaming Habits";
+                message = "Great job! You appear to have healthy gaming habits. Continue to monitor your gaming time and maintain balance in your life.";
+                resultDiv.style.borderColor = 'rgba(173, 255, 47, 0.5)';
+                resultDiv.style.background = 'rgba(173, 255, 47, 0.1)';
+            } else if (totalScore <= 7) {
+                title = "Moderate Risk - Be Mindful";
+                message = "You may want to pay closer attention to your gaming habits. Consider setting stricter time limits and taking regular breaks.";
+                resultDiv.style.borderColor = 'rgba(255, 215, 0, 0.5)';
+                resultDiv.style.background = 'rgba(255, 215, 0, 0.1)';
+            } else if (totalScore <= 11) {
+                title = "High Risk - Seek Support";
+                message = "Your gaming habits may be problematic. Consider reaching out to friends, family, or professional resources for support.";
+                resultDiv.style.borderColor = 'rgba(255, 107, 53, 0.5)';
+                resultDiv.style.background = 'rgba(255, 107, 53, 0.1)';
+            } else {
+                title = "Very High Risk - Get Help Now";
+                message = "Your responses suggest serious concerns about your gaming habits. Please consider contacting a professional or calling the helpline numbers provided on this page.";
+                resultDiv.style.borderColor = 'rgba(255, 68, 68, 0.5)';
+                resultDiv.style.background = 'rgba(255, 68, 68, 0.1)';
+            }
+
+            resultTitle.textContent = title;
+            resultMessage.textContent = message;
+            resultDiv.classList.add('show');
+            
+            // Scroll to results
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.warning-card, .tool-card, .resource-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
