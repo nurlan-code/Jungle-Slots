@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Jungle Slots</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 25%, #6b8e23 50%, #9acd32 75%, #adff2f 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo i {
+            color: #ff6b35;
+            margin-right: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffd700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ff6b35, #adff2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            border-radius: 2px;
+        }
+
+        .terms-section h3 {
+            font-size: 1.3rem;
+            color: #ff6b35;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .terms-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .terms-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .warning-box h4 {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box {
+            background: rgba(173, 255, 47, 0.1);
+            border: 2px solid rgba(173, 255, 47, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: #adff2f;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .toc h3 {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .toc a:hover {
+            color: #ffd700;
+            padding-left: 1rem;
+        }
+
+        /* Back to Home */
+        .back-to-home {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ffd700;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            padding-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .terms-content {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .toc {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .terms-content {
+                padding: 1.5rem;
+            }
+
+            .warning-box, .info-box {
+                padding: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                Jungle Slots
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Terms of Service</h1>
+                <p class="page-subtitle">Please read these terms carefully before using Jungle Slots. By accessing our platform, you agree to be bound by these terms.</p>
+            </div>
+
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i> Last Updated: September 24, 2024
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#description">2. Service Description</a></li>
+                    <li><a href="#eligibility">3. Eligibility</a></li>
+                    <li><a href="#user-conduct">4. User Conduct</a></li>
+                    <li><a href="#intellectual-property">5. Intellectual Property</a></li>
+                    <li><a href="#privacy">6. Privacy Policy</a></li>
+                    <li><a href="#disclaimers">7. Disclaimers</a></li>
+                    <li><a href="#limitation-liability">8. Limitation of Liability</a></li>
+                    <li><a href="#modifications">9. Modifications</a></li>
+                    <li><a href="#termination">10. Termination</a></li>
+                    <li><a href="#governing-law">11. Governing Law</a></li>
+                    <li><a href="#contact">12. Contact Information</a></li>
+                </ul>
+            </div>
+
+            <!-- Terms Content -->
+            <div class="terms-content">
+                <!-- Section 1: Acceptance of Terms -->
+                <div class="terms-section" id="acceptance">
+                    <h2 class="section-title">1. Acceptance of Terms</h2>
+                    <p>Welcome to Jungle Slots! These Terms of Service ("Terms") govern your use of our website and services. By accessing or using Jungle Slots, you agree to be bound by these Terms and all applicable laws and regulations.</p>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Notice</h4>
+                        <p>If you do not agree with any part of these Terms, you must not use our service. Your continued use of Jungle Slots constitutes acceptance of these Terms.</p>
+                    </div>
+                </div>
+
+                <!-- Section 2: Service Description -->
+                <div class="terms-section" id="description">
+                    <h2 class="section-title">2. Service Description</h2>
+                    <p>Jungle Slots is a <span class="highlight">demo casino platform</span> that provides entertainment through slot games and casino-style activities. Our service is designed for:</p>
+                    <ul>
+                        <li>Entertainment and educational purposes only</li>
+                        <li>Demonstrating casino game mechanics</li>
+                        <li>Providing a safe environment to experience gaming without financial risk</li>
+                        <li>Promoting responsible gaming practices</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> No Real Money</h4>
+                        <p>Jungle Slots does not involve real money gambling. All games use virtual credits for entertainment purposes only. No real money can be won or lost on our platform.</p>
+                    </div>
+                </div>
+
+                <!-- Section 3: Eligibility -->
+                <div class="terms-section" id="eligibility">
+                    <h2 class="section-title">3. Eligibility</h2>
+                    <p>To use Jungle Slots, you must:</p>
+                    <ol>
+                        <li>Be at least 18 years of age or the legal age of majority in your jurisdiction</li>
+                        <li>Have the legal capacity to enter into binding agreements</li>
+                        <li>Not be prohibited from using our services under applicable laws</li>
+                        <li>Provide accurate and truthful information when required</li>
+                    </ol>
+                    
+                    <h3>Age Verification</h3>
+                    <p>We reserve the right to request proof of age at any time. Users who cannot provide adequate proof of age may be suspended or banned from our platform.</p>
+                </div>
+
+                <!-- Section 4: User Conduct -->
+                <div class="terms-section" id="user-conduct">
+                    <h2 class="section-title">4. User Conduct</h2>
+                    <p>When using Jungle Slots, you agree to:</p>
+                    <ul>
+                        <li>Use the service only for lawful purposes</li>
+                        <li>Respect other users and maintain appropriate conduct</li>
+                        <li>Not attempt to hack, reverse engineer, or exploit our systems</li>
+                        <li>Not create multiple accounts to circumvent restrictions</li>
+                        <li>Not use automated scripts or bots</li>
+                        <li>Not share inappropriate content or spam</li>
+                    </ul>
+                    
+                    <h3>Prohibited Activities</h3>
+                    <p>The following activities are strictly prohibited:</p>
+                    <ul>
+                        <li>Attempting to gain unauthorized access to our systems</li>
+                        <li>Interfering with other users' enjoyment of the service</li>
+                        <li>Violating any applicable laws or regulations</li>
+                        <li>Impersonating other users or entities</li>
+                        <li>Distributing malware or harmful code</li>
+                    </ul>
+                </div>
+
+                <!-- Section 5: Intellectual Property -->
+                <div class="terms-section" id="intellectual-property">
+                    <h2 class="section-title">5. Intellectual Property</h2>
+                    <p>All content on Jungle Slots, including but not limited to:</p>
+                    <ul>
+                        <li>Game designs and graphics</li>
+                        <li>Software and source code</li>
+                        <li>Logos, trademarks, and branding</li>
+                        <li>Text, images, and multimedia content</li>
+                        <li>Audio and visual effects</li>
+                    </ul>
+                    <p>Are owned by Jungle Slots or our licensors and are protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without explicit permission.</p>
+                </div>
+
+                <!-- Section 6: Privacy Policy -->
+                <div class="terms-section" id="privacy">
+                    <h2 class="section-title">6. Privacy Policy</h2>
+                    <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information. By using Jungle Slots, you also agree to our Privacy Policy.</p>
+                    <p>Key points include:</p>
+                    <ul>
+                        <li>We collect minimal personal information</li>
+                        <li>Data is used only for service improvement</li>
+                        <li>We do not sell personal information to third parties</li>
+                        <li>Security measures are in place to protect your data</li>
+                    </ul>
+                </div>
+
+                <!-- Section 7: Disclaimers -->
+                <div class="terms-section" id="disclaimers">
+                    <h2 class="section-title">7. Disclaimers</h2>
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Service Disclaimer</h4>
+                        <p>Jungle Slots is provided "as is" without warranties of any kind. We do not guarantee that our service will be uninterrupted, error-free, or completely secure.</p>
+                    </div>
+                    
+                    <h3>No Gambling</h3>
+                    <p>Jungle Slots is not a gambling platform. No real money is involved, and no real prizes can be won. Our games are for entertainment purposes only.</p>
+                    
+                    <h3>Educational Purpose</h3>
+                    <p>Our platform serves an educational purpose by demonstrating how casino games work, helping users understand game mechanics without financial risk.</p>
+                </div>
+
+                <!-- Section 8: Limitation of Liability -->
+                <div class="terms-section" id="limitation-liability">
+                    <h2 class="section-title">8. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by law, Jungle Slots shall not be liable for:</p>
+                    <ul>
+                        <li>Any indirect, incidental, or consequential damages</li>
+                        <li>Loss of profits, data, or business opportunities</li>
+                        <li>Service interruptions or technical issues</li>
+                        <li>Actions of third parties or external factors</li>
+                    </ul>
+                    <p>Our total liability shall not exceed the amount you paid to access our services (which is zero for our free platform).</p>
+                </div>
+
+                <!-- Section 9: Modifications -->
+                <div class="terms-section" id="modifications">
+                    <h2 class="section-title">9. Modifications</h2>
+                    <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting on our website. We will notify users of significant changes through:</p>
+                    <ul>
+                        <li>Website notifications</li>
+                        <li>Email updates (if subscribed)</li>
+                        <li>In-app announcements</li>
+                    </ul>
+                    <p>Continued use of Jungle Slots after changes constitutes acceptance of the modified Terms.</p>
+                </div>
+
+                <!-- Section 10: Termination -->
+                <div class="terms-section" id="termination">
+                    <h2 class="section-title">10. Termination</h2>
+                    <p>We may terminate or suspend your access to Jungle Slots at any time for:</p>
+                    <ul>
+                        <li>Violation of these Terms</li>
+                        <li>Fraudulent or suspicious activity</li>
+                        <li>Legal or regulatory requirements</li>
+                        <li>Technical or business reasons</li>
+                    </ul>
+                    <p>You may also terminate your use of our service at any time by simply discontinuing access to our platform.</p>
+                </div>
+
+                <!-- Section 11: Governing Law -->
+                <div class="terms-section" id="governing-law">
+                    <h2 class="section-title">11. Governing Law</h2>
+                    <p>These Terms shall be governed by and construed in accordance with applicable international laws and regulations. Any disputes arising from these Terms shall be resolved through appropriate legal channels.</p>
+                </div>
+
+                <!-- Section 12: Contact Information -->
+                <div class="terms-section" id="contact">
+                    <h2 class="section-title">12. Contact Information</h2>
+                    <p>If you have questions about these Terms of Service, please contact us:</p>
+                    <ul>
+                        <li><strong>Email:</strong> legal@jungleslots.com</li>
+                        <li><strong>Support:</strong> support@jungleslots.com</li>
+                        <li><strong>Address:</strong> Tropical Gaming Center, 123 Jungle Avenue, Paradise City</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-clock"></i> Response Time</h4>
+                        <p>We typically respond to legal inquiries within 48 hours during business days.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="back-to-home">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="games.html">Games</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="responsible.html">Responsible Gaming</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jungle Slots. All rights reserved. | Demo Casino for Entertainment Only</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+
+        // Highlight current section in TOC
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.terms-section');
+            const tocLinks = document.querySelectorAll('.toc a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.style.color = '#fff';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = '#ffd700';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
